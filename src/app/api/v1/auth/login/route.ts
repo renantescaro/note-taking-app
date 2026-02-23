@@ -1,5 +1,5 @@
-import { getSupabaseClient } from "@/lib/supabase";
-import { NextResponse } from "next/server";
+import { getSupabaseClient } from '@/lib/supabase';
+import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
   const { email, password } = await request.json();
@@ -11,14 +11,12 @@ export async function POST(request: Request) {
   });
 
   if (error) {
-    return NextResponse.json(
-      { error: error.message },
-      { status: 401 });
+    return NextResponse.json({ error: error.message }, { status: 401 });
   }
 
   return NextResponse.json({
-    message: "Login realizado",
+    message: 'Login realizado',
     token: data.session?.access_token,
-    user: data.user
+    user: data.user,
   });
 }

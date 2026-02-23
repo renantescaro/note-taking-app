@@ -1,18 +1,17 @@
-
 npx supabase init
 
 npx supabase start
 
-APIs 
-Project URL    │ http://127.0.0.1:54321
-REST           │ http://127.0.0.1:54321/rest/v1
-GraphQL        │ http://127.0.0.1:54321/graphql/v1
+APIs
+Project URL │ http://127.0.0.1:54321
+REST │ http://127.0.0.1:54321/rest/v1
+GraphQL │ http://127.0.0.1:54321/graphql/v1
 Edge Functions │ http://127.0.0.1:54321/functions/v1
 
 Development Tools
-Studio  │ http://127.0.0.1:54323
+Studio │ http://127.0.0.1:54323
 Mailpit │ http://127.0.0.1:54324
-MCP     │ http://127.0.0.1:54321/mcp
+MCP │ http://127.0.0.1:54321/mcp
 
 Storage (S3)
 URL │ http://127.0.0.1:54321/storage/v1/s3
