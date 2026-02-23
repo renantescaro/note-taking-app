@@ -13,7 +13,7 @@ export class NoteService {
   }
 
   static async create(
-    supabase: SupabaseClient<Database>,
+    supabase: SupabaseClient<any>,
     title: string,
     content: string,
     userId: string,
@@ -29,13 +29,16 @@ export class NoteService {
   }
 
   static async update(
-    supabase: SupabaseClient<Database>,
+    supabase: SupabaseClient<any>,
     id: string,
     updates: { title?: string; content?: string },
   ) {
     const { data, error } = await supabase
       .from('notes')
-      .update({ ...updates, updated_at: new Date().toISOString() })
+      .update({
+        ...updates,
+        updated_at: new Date().toISOString(),
+      })
       .eq('id', id)
       .select()
       .single();

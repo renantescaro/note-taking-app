@@ -34,7 +34,31 @@ export type Database = {
   };
   public: {
     Tables: {
-      [_ in never]: never;
+      notes: {
+        Row: {
+          id: string;
+          title: string;
+          content: string;
+          user_id: string;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          title: string;
+          content: string;
+          user_id: string;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          title?: string;
+          content?: string;
+          user_id?: string;
+          updated_at?: string;
+        };
+      };
     };
     Views: {
       [_ in never]: never;
